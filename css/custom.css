@@ -3,3 +3,59 @@
 .brand-logo{
 	margin-left:5px;
 }
+.main{
+	background-color:#dce775;
+	background-image:url(../img/bg.png);
+}
+.intro
+{
+    text-align: center;
+    padding-top: 13%;
+    padding-bottom: 13%;
+    margin-bottom: 50px;
+}
+
+.intro h1
+{
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.intro h5
+{
+    text-transform: uppercase;
+    background-color: #dce775;
+    padding: 10px;
+    color: #333333;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+.about .col
+{
+    margin-bottom: 24px;
+}
+
+.about h5
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.about h6
+{
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+
+.about hr
+{
+    width: 40px;
+    margin-bottom: 45px;
+}
+
+.about .card
+{
+    text-align: center;
+}
