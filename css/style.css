@@ -85,6 +85,11 @@ footer.page-footer {
 	}
 
 .name {
-  color: #f0f0f0;
-  margin: 0 6px 0 6px; }
+  color: #cddc39;
+  margin: 0 6px 0 6px; 
+  }
+  .date {
+  color: #cddc39;
+  margin: 0 6px 0 6px; 
+  }
 /****************************************************/

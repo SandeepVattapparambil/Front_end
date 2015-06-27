@@ -10,11 +10,13 @@
         dataType: "json",
         success: function (data) {
 		var window_width = $(window).width();
-          var name = data.commit.author.name
+		  var name = data.author.login
+				date = jQuery.timeago(data.commit.author.date);
           if (window_width < 1120) {
             sha = sha.substring(0,7);
           }
-          $('.banner').find('.name').html(name).attr('href', data.html_url);
+		  $('.banner').find('.name').html(name).attr('href', data.author.html_url);
+		  $('.banner').find('.date').html(date);
         }
       });
     }
