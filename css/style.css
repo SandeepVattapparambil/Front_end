@@ -81,19 +81,10 @@ footer.page-footer {
 
 @media only screen and (max-width : 992px) {
   .banner {
-    text-align: center; } }
+    text-align: center; } 
+	}
 
-#banner-button {
-  background-color: #6f6d6d;
-  -webkit-transition: .25s ease;
-  -moz-transition: .25s ease;
-  -o-transition: .25s ease;
-  -ms-transition: .25s ease;
-  transition: .25s ease; }
-  #banner-button:hover {
-    background-color: #797777; }
-
-.sha {
+.name {
   color: #f0f0f0;
   margin: 0 6px 0 6px; }
 /****************************************************/

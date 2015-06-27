@@ -3,6 +3,22 @@
   $(function(){
     $('.button-collapse').sideNav();
     $('.parallax').parallax();
+	
+	if ($('.banner').length) { // Checks if widget div exists (Index only)
+      $.ajax({
+        url: "https://api.github.com/repos/CodeLarva/Front_end/commits/master",
+        dataType: "json",
+        success: function (data) {
+		var window_width = $(window).width();
+          var name = data.commit.author.name
+          if (window_width < 1120) {
+            sha = sha.substring(0,7);
+          }
+          $('.banner').find('.name').html(name).attr('href', data.html_url);
+        }
+      });
+    }
+	
   }); // end of document ready
 })(jQuery); // end of jQuery name space
 /******************Scroll to top initialization************************/
@@ -23,3 +39,4 @@ jQuery(document).ready(function() {
         return false;
     })
 });
+/*****************************************/
