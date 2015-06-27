@@ -70,3 +70,30 @@ footer.page-footer {
     background-color: rgba(135, 135, 135, 0.50);
 }
 /*************************************************/
+.banner {
+  padding: 14px 0;
+  height: 64px;
+  line-height: 36px;
+  background-color: #5c5757;
+  background-image:url(../img/bg.png);
+  color: #e6e6e6;
+  font-size: .9rem; }
+
+@media only screen and (max-width : 992px) {
+  .banner {
+    text-align: center; } }
+
+#banner-button {
+  background-color: #6f6d6d;
+  -webkit-transition: .25s ease;
+  -moz-transition: .25s ease;
+  -o-transition: .25s ease;
+  -ms-transition: .25s ease;
+  transition: .25s ease; }
+  #banner-button:hover {
+    background-color: #797777; }
+
+.sha {
+  color: #f0f0f0;
+  margin: 0 6px 0 6px; }
+/****************************************************/
