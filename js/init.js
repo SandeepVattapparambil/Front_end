@@ -47,4 +47,8 @@ $(window).scroll(function() {
        //alert("bottom!");
 	   preloader.on();
    }
+   else{
+	   preloader.off();
+   }
 });
+/*****************************************************/
