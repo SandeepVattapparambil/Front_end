@@ -41,4 +41,10 @@ jQuery(document).ready(function() {
         return false;
     })
 });
-/*****************************************/
+/********************Page bottom detect and alert*********************/
+$(window).scroll(function() {
+   if($(window).scrollTop() + $(window).height() == $(document).height()) {
+       //alert("bottom!");
+	   preloader.on();
+   }
+});
