@@ -57,3 +57,13 @@ jQuery('#down').click(function(e) {
     return false;
     e.preventDefault();
  });
+ jQuery('#nav_read').click(function(e) {
+    jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
+    return false;
+    e.preventDefault();
+ });
+  jQuery('#nav_read1').click(function(e) {
+    jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
+    return false;
+    e.preventDefault();
+ });
