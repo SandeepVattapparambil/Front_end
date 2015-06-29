@@ -73,7 +73,7 @@ jQuery('#down').click(function(e) {
     e.preventDefault();
  });
  jQuery('#contact').click(function(e) {
-    jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
+    jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top-63}, 1000);
     return false;
     e.preventDefault();
  });
