@@ -23,20 +23,25 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
 <link href="material_preloader/materialPreloader.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-<!--  Core Scripts--> 
-<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script> 
-<script src="material_preloader/materialPreloader.js"></script> 
-<script src="material_preloader/preloadjs.js"></script> 
+<!--  Core Scripts-->
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="material_preloader/materialPreloader.js"></script>
+<script src="material_preloader/preloadjs.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.4.1/jquery.timeago.js"></script>
-
 </head>
 <body>
 <div class="navbar-fixed">
   <nav class="lime" role="navigation">
-    <div class="nav-wrapper container"> <a id="logo-container" href="#" class="brand-logo">
+    <div class="nav-wrapper container"> 
+    <a id="logo-container" href="#" class="brand-logo"> 
     <img class="logo_img" src="img/logo1.png" width="183" height="40"> </a>
       <ul class="right hide-on-med-and-down">
-        <li><a id="nav_read" href="#readmore" class="waves-effect waves-light"><i class="material-icons right">live_help</i>About us</a></li>
+      <li><a id="home" href="#index-banner" class="waves-effect waves-light">
+        <i class="material-icons right">home</i>Home</a></li>
+        <li><a id="about" href="#readmore" class="waves-effect waves-light">
+        <i class="material-icons right">supervisor_account</i>About us</a></li>
+        <li><a id="contact" href="#contactus" class="waves-effect waves-light">
+        <i class="material-icons right">email</i>Contact</a></li>
       </ul>
       <ul id="nav-mobile" class="side-nav">
         <li><a id="nav_read1" href="#readmore" class="waves-effect waves-light">About us</a></li>
@@ -46,36 +51,31 @@
 </div>
 <div id="index-banner" class="parallax-container">
   <div class="section no-pad-bot">
-    <div class="container"> 
-    <br>
+    <div class="container"> <br>
       <br>
-      
       <h2 class="header center lime-text text-lighten-2" style="padding-top:70px;">CodeLarva Technologies</h2>
       <div class="row center">
         <h5 class="header col s12 light">Ecommerce platform made simpler and smoother !</h5>
       </div>
-      <div class="row center"> 
-      <a href="#readmore" id="down" class="btn-large waves-effect lime"><i class="material-icons left">hearing</i> Read More</a> </div>
+      <div class="row center"> <a href="#readmore" id="down" class="btn-large waves-effect lime"><i class="material-icons left">hearing</i> Read More</a> </div>
       <br>
       <br>
     </div>
   </div>
-  <div id="over" class="parallax">
-  <img src="img/background1.png" alt="Unsplashed background img 1">
-  </div>
-  </div>
+  <div id="over" class="parallax"> <img src="img/background1.png" alt="Unsplashed background img 1"> </div>
+</div>
 </div>
 <!--   Banner   -->
 <div id="readmore" class="banner">
   <div class="container">
     <h6 class="left">Latest Commit by:&nbsp;<a class="name"></a>&nbsp;<a class="date"></a></h6>
-</div>
+  </div>
 </div>
 <div class="container">
   <div class="section">
     <div class="row">
       <div class="col s12 center">
-        <h3><i class="mdi-content-send lime-text"></i></h3>
+        <h3><i class="medium material-icons lime-text">supervisor_account</i></h3>
         <h4>About Us</h4>
         <p class="left-align light">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam scelerisque id nunc nec volutpat. Etiam pellentesque tristique arcu, non consequat magna fermentum ac. Cras ut ultricies eros. Maecenas eros justo, ullamcorper a sapien id, viverra ultrices eros. Morbi sem neque, posuere et pretium eget, bibendum sollicitudin lacus. Aliquam eleifend sollicitudin diam, eu mattis nisl maximus sed. Nulla imperdiet semper molestie. Morbi massa odio, condimentum sed ipsum ac, gravida ultrices erat. Nullam eget dignissim mauris, non tristique erat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
       </div>
@@ -143,7 +143,7 @@
   </div>
   <div class="parallax"><img src="img/background2.jpg" alt="Unsplashed background img 2"></div>
 </div>
-<div class="container">
+<div id="contactus" class="container">
   <div class="section">
     <div class="row">
       <div class="col s12 center">

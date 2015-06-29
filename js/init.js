@@ -62,7 +62,17 @@ jQuery('#down').click(function(e) {
     return false;
     e.preventDefault();
  });
-  jQuery('#nav_read1').click(function(e) {
+  jQuery('#about').click(function(e) {
+    jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
+    return false;
+    e.preventDefault();
+ });
+   jQuery('#home').click(function(e) {
+    jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
+    return false;
+    e.preventDefault();
+ });
+ jQuery('#contact').click(function(e) {
     jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
     return false;
     e.preventDefault();
