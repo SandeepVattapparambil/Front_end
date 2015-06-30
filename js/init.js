@@ -50,7 +50,7 @@ jQuery(document).ready(function() {
 	   preloader.off();
    }
 });*/
-/*****************scroll to div**********************************/
+/*****************scroll to div - header**********************************/
 jQuery('#down').click(function(e) {
     jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
     return false;
@@ -72,6 +72,22 @@ jQuery('#down').click(function(e) {
     e.preventDefault();
  });
  jQuery('#contact').click(function(e) {
+    jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top-63}, 1000);
+    return false;
+    e.preventDefault();
+ });
+ /*****************scroll to div - SideNav**********************************/
+  jQuery('#about1').click(function(e) {
+    jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
+    return false;
+    e.preventDefault();
+ });
+   jQuery('#home1').click(function(e) {
+    jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
+    return false;
+    e.preventDefault();
+ });
+ jQuery('#contact1').click(function(e) {
     jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top-63}, 1000);
     return false;
     e.preventDefault();
