@@ -33,6 +33,14 @@ p {
 	min-height:600px;
 	background-color: rgba(0, 0, 0, 0.4);
 }
+#index-banner1.parallax-container{
+	min-height:400px;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+#index-banner2.parallax-container{
+	min-height:380px;
+	background-color: rgba(0, 0, 0, 0.4);
+}
 @media only screen and (max-width : 992px) {
   .parallax-container .section {
     position: absolute;
