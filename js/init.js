@@ -34,7 +34,6 @@ jQuery(document).ready(function() {
             jQuery('.back-to-top').fadeOut(duration);
         }
     });
-    
     jQuery('.back-to-top').click(function(event) {
         event.preventDefault();
         jQuery('html, body').animate({scrollTop: 0}, duration);
@@ -42,7 +41,7 @@ jQuery(document).ready(function() {
     })
 });
 /********************Page bottom detect and alert*********************/
-$(window).scroll(function() {
+/*$(window).scroll(function() {
    if($(window).scrollTop() + $(window).height() == $(document).height()) {
        //alert("bottom!");
 	   preloader.on();
@@ -50,7 +49,7 @@ $(window).scroll(function() {
    else{
 	   preloader.off();
    }
-});
+});*/
 /*****************scroll to div**********************************/
 jQuery('#down').click(function(e) {
     jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
