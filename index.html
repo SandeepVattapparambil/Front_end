@@ -34,16 +34,11 @@
 <body>
 <div class="navbar-fixed">
   <nav class="lime" role="navigation">
-    <div class="nav-wrapper container"> 
-    <a id="logo-container" href="#" class="brand-logo"> 
-    <img class="logo_img" src="img/logo1.png" width="183" height="40"> </a>
+    <div class="nav-wrapper container"> <a id="logo-container" href="#" class="brand-logo"> <img class="logo_img" src="img/logo1.png" width="183" height="40"> </a>
       <ul class="right hide-on-med-and-down">
-        <li><a id="home" href="#index-banner" class="waves-effect waves-light"> 
-        <i class="material-icons right">home</i>Home</a></li>
-        <li><a id="about" href="#readmore" class="waves-effect waves-light"> 
-        <i class="material-icons right">supervisor_account</i>About us</a></li>
-        <li><a id="contact" href="#contactus" class="waves-effect waves-light"> 
-        <i class="material-icons right">email</i>Contact</a></li>
+        <li><a id="home" href="#index-banner" class="waves-effect waves-light"> <i class="material-icons right">home</i>Home</a></li>
+        <li><a id="about" href="#readmore" class="waves-effect waves-light"> <i class="material-icons right">supervisor_account</i>About us</a></li>
+        <li><a id="contact" href="#contactus" class="waves-effect waves-light"> <i class="material-icons right">email</i>Contact</a></li>
       </ul>
       <ul id="nav-mobile" class="side-nav">
         <li><a id="home1" href="#index-banner" class="waves-effect waves-light">Home</a></li>
@@ -61,8 +56,7 @@
       <div class="row center">
         <h5 class="header col s12 light">Ecommerce platform made simpler and smoother !</h5>
       </div>
-      <div class="row center"> <a href="#readmore" id="down" class="btn-large waves-effect lime">
-      <i class="material-icons left">hearing</i> Read More</a> </div>
+      <div class="row center"> <a href="#readmore" id="down" class="btn-large waves-effect lime"> <i class="material-icons left">hearing</i> Read More</a> </div>
       <br>
       <br>
     </div>
@@ -156,32 +150,28 @@
         <h4>Contact Us</h4>
         <p class="center-align light">Use the contact form below to get to us!</p>
         <div class="row">
-   <form id="contact" class="col s12" method="POST" action="process/form.php">
-      <div class="row">
-        <div class="input-field col s6">
-        <i class="material-icons prefix">account_circle</i>
-          <input type="text" required class="validate" id="name" name="name">
-          <label for="name">Name</label>
+          <form id="contact" class="col s12" method="POST" action="process/form.php">
+            <div class="row">
+              <div class="input-field col s6"> <i class="material-icons prefix">account_circle</i>
+                <input type="text" required class="validate" id="name" name="name">
+                <label for="name">Name</label>
+              </div>
+              <div class="input-field col s6"> <i class="material-icons prefix">email</i>
+                <input type="email" required class="validate" id="email" name="mail">
+                <label for="email">Email</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="input-field col s12"> <i class="material-icons prefix">mode_edit</i>
+                <textarea required class="materialize-textarea" id="textarea1" name="message"></textarea>
+                <label for="textarea1">Message</label>
+              </div>
+              <button id="clear" class="btn-large waves-effect lime" type="reset"><i class="material-icons left">delete</i> Clear</button>
+              &nbsp;
+              <button id="send" class="btn-large waves-effect lime" type="submit" onClick="ajax()"><i class="material-icons left">send</i> Send</button>
+            </div>
+          </form>
         </div>
-        <div class="input-field col s6">
-        <i class="material-icons prefix">email</i>
-          <input type="email" required class="validate" id="email" name="mail">
-          <label for="email">Email</label>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s12">
-        <i class="material-icons prefix">mode_edit</i>
-          <textarea required class="materialize-textarea" id="textarea1" name="message"></textarea>
-          <label for="textarea1">Message</label>
-        </div>
-        <button class="btn-large waves-effect lime" type="reset"><i class="material-icons left">delete</i> Clear</button>
-        &nbsp;
-        <button id="send" class="btn-large waves-effect lime" type="submit" onClick="ajax()"><i class="material-icons left">send</i> Send</button>
-      </div>
-     </form>
-  </div>
-        
       </div>
     </div>
   </div>
@@ -248,8 +238,10 @@ $('form').submit(function(event) {
             },
             success: function(data) {
 				$('#send').html('Send !');
-               Materialize.toast('Message send!', 3000, 'rounded'); // 'rounded' is the class I'm applying to the toast
-			  $("input[type=text],input[type=email], textarea").val("");//form reset
+               Materialize.toast('<i class="material-icons left">done</i>Message send!', 3000, 'rounded');
+			   Materialize.toast('Thank you!', 3000, 'rounded'); // 'rounded' is the class I'm applying to the toast
+			  //$("input[type=text],input[type=email], textarea").val("");//form reset
+			  $('#contact')[0].reset();
             }
 		})
     })
