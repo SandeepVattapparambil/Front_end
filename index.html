@@ -238,10 +238,8 @@ $('form').submit(function(event) {
             },
             success: function(data) {
 				$('#send').html('Send !');
-               Materialize.toast('<i class="material-icons left">done</i>Message send!', 3000, 'rounded');
-			   Materialize.toast('Thank you!', 3000, 'rounded'); // 'rounded' is the class I'm applying to the toast
-			  //$("input[type=text],input[type=email], textarea").val("");//form reset
-			  $('#contact')[0].reset();
+               Materialize.toast('<i class="material-icons left">done</i>Message send, Thank you!', 3000, 'rounded');
+			  $("input[type=text],input[type=email], textarea").val("");//form reset
             }
 		})
     })
