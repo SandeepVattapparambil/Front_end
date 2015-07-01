@@ -156,7 +156,7 @@
         <h4>Contact Us</h4>
         <p class="center-align light">Use the contact form below to get to us!</p>
         <div class="row">
-   <form class="col s12" method="POST" action="#">
+   <form id="contact" class="col s12" method="POST" action="process/form.php">
       <div class="row">
         <div class="input-field col s6">
         <i class="material-icons prefix">account_circle</i>
@@ -177,7 +177,7 @@
         </div>
         <button class="btn-large waves-effect lime" type="reset"><i class="material-icons left">delete</i> Clear</button>
         &nbsp;
-        <button class="btn-large waves-effect lime" type="submit"><i class="material-icons left">send</i> Send</button>
+        <button id="send" class="btn-large waves-effect lime" type="submit" onClick="ajax()"><i class="material-icons left">send</i> Send</button>
       </div>
      </form>
   </div>
@@ -235,7 +235,25 @@
 <script src="js/jquery.nicescroll.js"></script> 
 <script src="js/nicescroll_customization.js"></script> 
 <script type="text/javascript">
-
+$(function ajax() {
+//this submits a form
+$('form').submit(function(event) {
+	event.preventDefault();
+        $.ajax({
+            type: "POST",
+            url: "process/form.php",
+            data: $("#contact").serialize(),
+				beforeSend: function() {
+                $('#submit').html('Sending...');
+            },
+            success: function(data) {
+				$('#submit').html('Send !');
+               toastr.success("Your Message has been submitted ! Thank you");
+			  $("input[type=text],input[type=email], textarea").val("");//form reset
+            }
+		})
+    })
+})
 </script>
 </body>
 </html>
