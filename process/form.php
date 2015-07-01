@@ -41,5 +41,5 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 		mail($to, $subject, $messages);
 
 endif; //form submitted
-header("Location:../index.php");//if success
+header("Location:../index.html");//if success
 ?>

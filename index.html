@@ -160,8 +160,8 @@
       <div class="row">
         <div class="input-field col s6">
         <i class="material-icons prefix">account_circle</i>
-          <input type="text" required class="validate" id="first_name">
-          <label for="first_name">Name</label>
+          <input type="text" required class="validate" id="name">
+          <label for="name">Name</label>
         </div>
         <div class="input-field col s6">
         <i class="material-icons prefix">email</i>
@@ -238,21 +238,22 @@
 $(function ajax() {
 //this submits a form
 $('form').submit(function(event) {
-	event.preventDefault();
+	
         $.ajax({
             type: "POST",
             url: "process/form.php",
             data: $("#contact").serialize(),
 				beforeSend: function() {
-                $('#submit').html('Sending...');
+                $('#send').html('Sending...');
             },
             success: function(data) {
-				$('#submit').html('Send !');
-               toastr.success("Your Message has been submitted ! Thank you");
+				$('#send').html('Send !');
+               Materialize.toast('Message send!', 3000, 'rounded'); // 'rounded' is the class I'm applying to the toast
 			  $("input[type=text],input[type=email], textarea").val("");//form reset
             }
 		})
     })
+	event.preventDefault();
 })
 </script>
 </body>
