@@ -79,16 +79,19 @@ jQuery('#down').click(function(e) {
  /*****************scroll to div - SideNav**********************************/
   jQuery('#about1').click(function(e) {
     jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
+	$('.button-collapse').sideNav('hide');
     return false;
     e.preventDefault();
  });
    jQuery('#home1').click(function(e) {
     jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top}, 1000);
+	$('.button-collapse').sideNav('hide');
     return false;
     e.preventDefault();
  });
  jQuery('#contact1').click(function(e) {
     jQuery('html,body').animate({ scrollTop: jQuery(this.hash).offset().top-63}, 1000);
+	$('.button-collapse').sideNav('hide');
     return false;
     e.preventDefault();
  });
