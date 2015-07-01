@@ -16,8 +16,8 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 		$subject	=		"From $name";
 		$messages	=		json_encode($formdata);
 
-		$replyto	=		"From: fromprocessor@iviewsource.com \r\n".
-									"Reply-To: donotreply@iviewsource.com \r\n";
+		$replyto	=		"From: CodeLarva@codelarva.com \r\n".
+									"Reply-To: donotreply@codelarva.com \r\n";
 
 		mail($to, $subject, $messages);
 
