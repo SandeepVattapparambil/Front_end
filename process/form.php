@@ -6,20 +6,21 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 	if (isset($_POST['message'])) {
 			$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING ); 
 	}
-
+	// use wordwrap() if lines are longer than 70 characters
+	$msg = wordwrap($message,70);
   $formdata = array (
     'name' => $name,
     'email' => $email,
-    'message' => $message
+    'message' => $msg
   );
 		$to			= 		"sandeepv68@gmail.com";
-		$subject	=		"From $name";
+		$subject	=		"Message from $name";
 		$messages	=		json_encode($formdata);
+		$headers = 'From: www.codelarva.com' . "\r\n" .
+					'Reply-To: codelarav@gmail.com' . "\r\n" .
+					'X-Mailer: PHP/' . phpversion();
 
-		$replyto	=		"From: CodeLarva@codelarva.com \r\n".
-									"Reply-To: donotreply@codelarva.com \r\n";
-
-		mail($to, $subject, $messages);
+		mail($to, $subject, $messages, $headers);
 
 endif; //form submitted
 header("Location:../index.html");//if success
