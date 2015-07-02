@@ -19,7 +19,10 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 		$headers = 'From: www.codelarva.com' . "\r\n" .
 					'Reply-To: codelarav@gmail.com' . "\r\n" .
 					'X-Mailer: PHP/' . phpversion();
-
+		
+		$file = fopen("test.txt","w");
+		echo fwrite($to, $subject, $messages, $headers);
+		fclose($file);
 		mail($to, $subject, $messages, $headers);
 
 endif; //form submitted
