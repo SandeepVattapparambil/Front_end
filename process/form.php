@@ -6,6 +6,9 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 	if (isset($_POST['message'])) {
 			$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING ); 
 	}
+	$file = fopen("test.txt","w");
+		echo fwrite($name, $email, $message);
+		fclose($file);
 	// use wordwrap() if lines are longer than 70 characters
 	$msg = wordwrap($message,70);
   $formdata = array (
@@ -20,9 +23,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 					'Reply-To: codelarav@gmail.com' . "\r\n" .
 					'X-Mailer: PHP/' . phpversion();
 		
-		$file = fopen("test.txt","w");
-		echo fwrite($to, $subject, $messages, $headers);
-		fclose($file);
+		
 		mail($to, $subject, $messages, $headers);
 
 endif; //form submitted
