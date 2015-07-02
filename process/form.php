@@ -1,5 +1,5 @@
 <?php
-if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
+/*if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 
 	if (isset($_POST['name'])) { $name = $_POST['name']; }
 	if (isset($_POST['email'])) { $email = $_POST['email']; }
@@ -27,5 +27,7 @@ if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action']))):
 		mail($to, $subject, $messages, $headers);
 
 endif; //form submitted
-header("Location:../index.html");//if success
+header("Location:../index.html");//if success*/
+
+
 ?>
