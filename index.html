@@ -231,7 +231,7 @@ $('form').submit(function(event) {
             url: "process/form.php",
             data:'userName='+$("#userName").val()+'&userEmail='+
             $("#userEmail").val()+'&content='+
-            $("#content").val(),
+            $("content").val(),
             type: "POST",
 			beforeSend: function() {
                 $('#send').html('Sending...');},
