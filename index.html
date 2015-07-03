@@ -153,22 +153,22 @@
           <form id="contact" class="col s12" method="POST" action="process/form.php">
             <div class="row">
               <div class="input-field col s6"> <i class="material-icons prefix">account_circle</i>
-                <input type="text" required class="validate" id="names" name="names">
+                <input type="text" required class="validate" id="userName" name="userName">
                 <label for="name">Name</label>
               </div>
               <div class="input-field col s6"> <i class="material-icons prefix">email</i>
-                <input type="email" required class="validate" id="email" name="email">
+                <input type="email" required class="validate" id="userEmail" name="userEmail">
                 <label for="email">Email</label>
               </div>
             </div>
             <div class="row">
               <div class="input-field col s12"> <i class="material-icons prefix">mode_edit</i>
-                <textarea required class="materialize-textarea" id="textarea1" name="textarea1"></textarea>
+                <textarea required class="materialize-textarea" id="content" name="content"></textarea>
                 <label for="textarea1">Message</label>
               </div>
               <button id="clear" class="btn-large waves-effect lime" type="reset"><i class="material-icons left">delete</i> Clear</button>
               &nbsp;
-              <button id="send" class="btn-large waves-effect lime" type="submit" onClick="ajax()"><i class="material-icons left">send</i> Send</button>
+              <button id="send" class="btn-large waves-effect lime" type="submit"><i class="material-icons left">send</i> Send</button>
             </div>
           </form>
         </div>
@@ -225,24 +225,23 @@
 <script src="js/jquery.nicescroll.js"></script> 
 <script src="js/nicescroll_customization.js"></script> 
 <script type="text/javascript">
-$(function ajax() {
-//this submits a form
-$('form').submit(function(event) {
+$('form').submit(function(event) {  
 	event.preventDefault();
-        $.ajax({
-            type: "POST",
+      jQuery.ajax({
             url: "process/form.php",
-            data: $("#contact").serialize(),
-				beforeSend: function() {
-                $('#send').html('Sending...');
-            },
-            success: function(data) {
-				$('#send').html('Send !');
-               Materialize.toast('<i class="material-icons left">done</i>Message send, Thank you!', 3000, 'rounded');
+            data:'userName='+$("#userName").val()+'&userEmail='+
+            $("#userEmail").val()+'&content='+
+            $("#content").val(),
+            type: "POST",
+			beforeSend: function() {
+                $('#send').html('Sending...');},
+            success:function(data){
+                $("#send").html('Send !');
+				Materialize.toast('<i class="material-icons left">done</i>Message send, Thank you!', 3000, 'rounded');
 			  $("input[type=text],input[type=email], textarea").val("");//form reset
-            }
-		})
-    })
+            },
+            error:function (){}
+        });
 })
 </script>
 </body>

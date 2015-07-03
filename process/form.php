@@ -1,25 +1,14 @@
 <?php
-//if (($_SERVER['REQUEST_METHOD'] == 'POST') && (!empty($_POST['action'])))
-//{
-	if (isset($_POST['names'])) 
-	{ 
-	$name = $_POST['names']; 
-	}
-	if (isset($_POST['email'])) 
-	{ 
-	$email = $_POST['email']; 
-	}
-	if (isset($_POST['textarea1'])) 
+    $toEmail = "sandeepv68@gmail.com.com";
+    $mailHeaders = "From: " . $_POST["userName"] . "<". $_POST["userEmail"] .">\r\n";
+	$subject = "Message by ". $_POST["userName"] ." from CodeLarva.com";
+    if(mail($toEmail, $subject, $_POST["content"], $mailHeaders)) 
 	{
-	$message = filter_var($_POST['textarea1']); 
-	}
-	$to			= 		"sandeepv68@gmail.com";
-	$subject	=		"Message by" .$name. "from CodeLarva Technologies";
-	$messages	=		$message;
-
-	$headers	=		"From: visitor@codelarva.com \r\n".
-						"Reply-To: do-not-reply@codelarva.com \r\n";
-mail($to, $subject, $messages);
-header("Location:../index.php");//if success	
-//}
+        //print "<p class='success'>Mail Sent.</p>";
+		header("location:../index.html");
+    } else 
+	{
+        //print "<p class='Error'>Problem in Sending Mail.</p>";
+		header("location:../index.html");
+    }
 ?>
