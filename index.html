@@ -236,7 +236,7 @@ $('form').submit(function(event) {
 			beforeSend: function() {
                 $('#send').html('Sending...');},
             success:function(data){
-                $("#send").html('Send !');
+                $("#send").html('<i class="material-icons left">send</i> Send');
 				Materialize.toast('<i class="material-icons left">done</i>Message send, Thank you!', 3000, 'rounded');
 			  $("input[type=text],input[type=email], textarea").val("");//form reset
             },
