@@ -217,7 +217,7 @@
   </div>
 </div>
 <!--  START Map -->
-<div id="googleMap" class="parallax-container valign-wrapper"></div>
+<div id="googleMap" class="parallax-container valign-wrapper" style="height:450px;"></div>
 <!--  END Map -->  
 </div>
 <!--  END Contact form --> 
@@ -295,16 +295,29 @@ $('form').submit(function(event) {
         });
 })
 </script>
-<script>
-function initialize() {
-  var mapProp = {
-    center:new google.maps.LatLng(11.317170, 75.932039),
-    zoom:16,
-    mapTypeId:google.maps.MapTypeId.ROADMAP
-  };
-  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
+<script>   
+    var iconBase = 'img/marker.png';
+    var myLatlng = new google.maps.LatLng(11.317170, 75.932039);/*(40.7240252, -73.9941299)*/
+
+    var mapContainer = document.getElementById('googleMap');
+    var mapOptions = {
+        panControl: false,
+        draggable: false,
+        zoomControl: false,
+        scrollwheel: false,
+        scaleControl: false,
+        center: myLatlng,
+        mapTypeId: google.maps.MapTypeId.MAP,
+        zoom: 16 /*18*/
+    };
+
+    var map = new google.maps.Map(mapContainer, mapOptions);
+    var marker = new google.maps.Marker({
+        position: myLatlng,
+        map: map,
+        icon: 'img/marker.png',
+		title:"Hello, We are over here !"
+    });
 </script>
 </body>
 </html>
