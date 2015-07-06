@@ -216,6 +216,9 @@
     </div>
   </div>
 </div>
+ <div id="googleMap" class="parallax-container valign-wrapper"></div>
+  
+</div>
 <!--  END Contact form --> 
 <!--  START Parallax -->
 <div id="index-banner2" class="parallax-container valign-wrapper">
@@ -290,6 +293,17 @@ $('form').submit(function(event) {
             error:function (){}
         });
 })
+</script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng(51.508742,-0.120850),
+    zoom:5,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+google.maps.event.addDomListener(window, 'load', initialize);
 </script>
 </body>
 </html>
