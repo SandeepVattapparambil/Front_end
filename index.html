@@ -316,9 +316,20 @@ var iconBase = 'img/marker.png';
 		title:"Hello, We are over here !"
     });
 </script>
-<script>   
-    $('#clear').hide();
-	$('form').val()
+<script>
+$('#clear').hide();	
+$( "input[type='text']" ).change(function() {
+  // Check input( $( this ).val() ) for validity here
+   $('#clear').show();
+});
+$( "input[type='email']" ).change(function() {
+  // Check input( $( this ).val() ) for validity here
+   $('#clear').show();
+});
+$( "#content" ).change(function() {
+  // Check input( $( this ).val() ) for validity here
+   $('#clear').show();
+});
 </script>
 </body>
 </html>
